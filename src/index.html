@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크니쁘니 이벤트</title>
+    <link rel="stylesheet" href="./Styles/index.css">
+</head>
+<body>
+    <!-- 전체 페이지 컨테이너  -->
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <!-- <img src="./Assets/img/backlanding.png" alt="background"> -->
+            </div>
+        </header>
+        <main>
+            <div id="evnet1">
+                <div class="inner">
+                    <div class="inner1">
+                        <div class="url">
+                            <a href="https://www.youtube.com/c/%ED%81%AC%EB%8B%88%EC%81%98%EB%8B%88%EC%99%80%EC%B9%9C%EA%B5%AC%EB%93%A4">
+                                <img src="./Assets/img/info_youtube.png" alt="유튜브">
+                            </a>
+                            <a href="https://www.instagram.com/knpn_friends/">
+                                <img src="./Assets/img/info_instar.png" alt="인스타">
+                            </a>
+                        </div>
+                        <div id="join">
+                            <form action="#" method="post">
+                                <div class="info1">
+                                    <input type="text" placeholder="아이 이름을 작성해주세요">
+                                    <input type="text" placeholder="이메일을 입력해 주세요">
+                                </div>
+                                <div class="radio_info">
+                                    <label>
+                                        <input type="radio" name="gender" value="female">  <span>여아</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="gender" value="male" class="male"> <span>남아</span>
+                                    </label>
+                                </div>
+                                <div class="info2">
+                                    <select name="age" id="select_age">
+                                        <option value="none">나이를 입력해주세요</option>
+                                        <option value="3">3세</option>
+                                        <option value="4">4세</option>
+                                        <option value="5">5세</option>
+                                        <option value="6">6세</option>
+                                        <option value="7">7세</option>
+                                        <option value="8">8세</option>
+                                    </select>
+                                    <input type="text" placeholder="핸드폰 번호를 입력해주세요">
+                                    <input type="text" placeholder="사진을 첨부해주세요" >
+                                        <label for="file">첨부하기</label>
+                                        <input type="file" id="file">
+                                    <input class="instaUrl" type="text" placeholder="인스타그램에 업로드한 게시물 URL을 입력해 주세요">
+                                    <span>* 인스타 그램 업로드는 필수입니다 </span>
+                                    <h2>원하시는 쿠션 색상을 클릭해 주세요</h2>
+                                </div>
+                                <div class="info_gift">
+                                    <label class="gift_blue">
+                                        <input type="radio" name="gift" value="blue" class="input_blue">
+                                        <img src="./Assets/img/cushion_blue.png" alt="">
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="gift" value="pink">
+                                        <img src="./Assets/img/cushion_pink.png" alt="">
+                                    </label>
+                                </div>
+                                <div class="info_gift_submit">
+                                    <p>* 제출 이후 <span>중도색상 변경이 어려우니,</span><br></p>
+                                    <p>신중하게 선택해주세요!</p>
+                                </div>
+                                <div class="agreement">
+                                    <label for="check_agreement1">
+                                        <input type="checkbox" name="agreement" id="check_agreement1">
+                                        개인정보 수집, 이용, 활용동의 <a href="#"><span>[자세히보기]</span></a>
+                                        <br>
+                                    </label>
+                                    <label for="check_agreement2">
+                                        <input type="checkbox" name="agreement" id="check_agreement2">
+                                        고유식별정보 처리에 관한 동의  <a href="#"><span>[자세히보기]</span></a>
+                                        <br>
+                                    </label>  
+                                </div>
+                                <div class="submit">
+                                    <label>
+                                        <input type="submit" value="공모전 참여하기">
+                                    </label>
+                                <p>*본 공모전 참여 대상은 <span>3세~8세</span> 입니다.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="event2">
+                <div class="inner">
+                    <div class="inner2">
+                        <img src="./Assets/img/back2.png" alt="">
+                        <button onclick="hashtagCopy" name="hashTag"></button>
+                    </div>                    
+                </div>
+            </div>
+            <div class="event3">
+                <div class="inner">
+                    <div class="inner3">
+                        <img src="./Assets/img/back3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="event4">
+                <div class="inner">
+                    <div class="inner4">
+                        <img src="./Assets/img/back4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="event5">
+                <div class="inner">
+                    <div class="inner5">
+                        <img src="./Assets/img/backKakao5Add2.png" alt="">
+                        <a href="#">크니쁘니와친구들공모전</a>
+                        <div class="guide">
+                            <a href="#">공모전 관련하여 문의하기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="note">
+                <div class="inner">
+                    <div class="inner6">
+                        <p>유의사항</p><br>
+                        <p>-본 이벤트는 3세-7세 어린이 대상이며 배송 상의 문제로 국내 거주자만 참여 가능합니다.<br>
+                            -직접 그린 그림으로만 참여 가능하며, 참여한 그림으로 후드티가 제작됩니다. (아이의 그림을 후드티로 제작하기 위해 사이즈, 레이아웃 등 일부 변형이 있을 수 있습니다.)<br>
+                            -타인의 초상권 및 저작권 등을 침해하는 그림은 응모가 불가하며 초상권, 저작권 등의 분쟁 발생 시 모든 법적 책임은 '응모자'에게 있습니다.<br>
+                            -당첨자로 선정되면 후드티 제작을 위해 그림을 촬영하여 제출해야 하니 그림은 구겨지지 않게 보관해 주세요. (그림 촬영본 미 제출 시 당첨이 취소될 수 있습니다.)<br>
+                            -당첨작은 향후 1년간 롯데칠성음료 마케팅 활동에 활용될 수 있습니다.<br>
+                            -당첨자 발표 후 정해진 기간 내 DM 미회신 시 당첨이 취소됩니다.<br>
+                            -이벤트 응모 게시글을 삭제할 경우 당첨이 취소될 수 있습니다.<br>
+                            -경품 배송과 관련된 일정 및 기타 사항은 당첨자 발표 DM으로 별도 안내드리겠습니다.<br>
+                            -기타 문의사항은 크니쁘니 공식 인스타그램 DM 또는 knpn.tv.event@gmail.com으로 문의주시기 바랍니다.<br></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+           <div class="goto">
+                <div class="inner">
+                    <div class="inner7">
+                        <label>
+                            <img src="./Assets/img/floatingimg.png" alt="바로가기"> 
+                            <a href="#">공모전 참여신청 바로가기 ></a>
+                        </label>
+                    </div>
+                </div>
+           </div>
+        </footer>
+    </div>
+</body>
+</html>
