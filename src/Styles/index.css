@@ -10,8 +10,11 @@
 }
 body{
     width: 100%;
-    background-image: url("../Assets/img/backlanding.png");
+    background-image: url("../Assets/img/checkimg.png");
+    /* 배경이미지 다시 확인 */
     background-repeat: no-repeat;
+    background-size: cover; 
+    /* 커버를 꼭 적자! */
     margin: auto;
 }
 /* ------컨테이너------- */

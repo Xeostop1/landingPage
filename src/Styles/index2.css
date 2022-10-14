@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --border-set:1px solid red;
+    --input-color:#F7F7F7;
+    --main-color:#239AFF;
+    --margin-left:10px;
+}
+body{
+    background-image: url("../Assets/Img/background1.png");
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    /* 커버를 꼭 적자! from sun */
+}
+#wrap{
+    display: grid;
+    place-items: center;   
+    /*  grid를 사용해서 간단하게 수직 중앙 정렬:  gird 확인하기*/
+}
+/* 1.정렬하고 싶은 큰파트를 모두 선택 */
+/* display:flex 주고 콘텐츠를 가운데 정렬함 */
+#main, #footer, header{
+    display: flex;
+    justify-content: center;
+}
+.inner{
+    /* width: 650px; */
+    justify-content: center; 
+    flex-direction: column;        
+     /* 노션참고 flex-direction:아이템을 배치할 때 사용 */
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* 인풋 아웃라인 설정 */
+input:focus{
+    outline: 3px solid var(--main-color);
+    font-size: 1.23em;
+}
+/* 플레이스홀더 업그레이드 가상클래스 사용 */
+input::placeholder{
+    padding-left: 15px;
+    font-size: 1.5em;
+}
+/* inner안에 사진, div(구획) 가운데 정렬 */
+.inner img, .inner div{
+    text-align: center;
+    justify-content: center; 
+}
+header img{
+    display: flex;
+    flex-direction: row;        
+}
+header img:first-of-type{
+    margin-top: 350px;
+    margin-bottom: 250px;
+}
+header img:last-of-type{
+    margin-top: 80px;
+}
+
+
+/* =========== */
+/*     main    */
+/* =========== */
+.main_inner{
+    display: flex;
+    justify-content: center; 
+    flex-direction: column; 
+    text-align: center;
+    width: 600px;
+    background-color: white;
+    margin-top: 90px;
+    border-radius: 10px;
+    /* z인덱스 세팅 */
+    position: relative;
+    z-index: 1;
+}
+#evnet1 > img:first-of-type{
+    /* z인덱스 세팅 */
+    position: relative;
+    width: 100px;
+    z-index: 2;
+    left: 550px;
+    top: -30px;
+}
+/* 확실하게 포함된 자식들만 세팅해주기 */
+#evnet1 > img:nth-child(2){
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 160px;
+    width: 50%;
+    /* border: var(--border-set); */
+}
+
+/* =================== */
+/*    유튜브, 인스타  */
+/* =================== */
+.PR_url a{
+    display: inline-block;
+}
+.PR_url a:first-of-type{
+    margin: -20px 80px 50px -23px;
+}
+.PR_url img{
+    width: 110%;
+}
+/* =================== */
+/*   개인정보 input  */
+/* =================== */
+/*-----인풋 전체세팅-----*/
+.join input{
+    border: none;
+    background-color: var(--input-color);
+    width: 540px;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 4%;
+    margin-left: var(--margin-left);
+    font-size: 1em;
+}
+/* ---성별 라디오버튼 */
+.info_gender{
+    display: inline-block;
+}
+.info_gender span{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+.info_gender input{
+    margin-top: 10px;
+    margin-bottom: 35px;
+    width: 2em;
+    height: 2em;
+}
+.info_gender input:focus{
+    outline: none;
+}
+.info_gender label:last-child {
+    margin-left: 200px;
+}
+/* -----셀렉트와 옵션 세팅-------*/
+#select_age{
+    border: none;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.23em;
+    color: #757575;
+    padding: 10px;
+    width: 540px;
+    height: 80px;
+    margin-left: var(--margin-left);
+}
+
+/* -----파일첨부하기 버튼변경------- */
+.info_TelAdd label{
+    display: inline-block;
+    position: relative;
+    top: -77px;
+    left: 190px;
+    padding: 13px 13px 0 13px;
+    color: #fff;
+    background-color: var(--main-color);
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: -70px;
+}
+.info_TelAdd input[type="file"]{
+    display: none;
+    position: absolute;
+    margin-bottom: -70px;
+}
+.instaUrl{
+    margin-top: -90px;
+}
+.info_TelAdd input:nth-child(2){
+    height: 80px;  
+    margin-bottom: 11px;
+    /* 사진을 첨부 input 미세조정 */
+}
+/* -------파일 첨부 안내문-------- */
+.info_Add_Notice span{
+    display: inline-block;
+    color: red;
+    font-size: 1.1em;
+    margin-left: -224px;
+    margin-top: -3px;
+}
+.info_Add_Notice h2{
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+ /* ---쿠션선택 라디오버튼-----*/
+ .info_gift label{
+    display: inline-block;
+}
+.info_gift label:first-of-type{
+    margin-left: -24px;
+    margin-right: 80px;
+}
+.info_gift img{
+    cursor: pointer;
+    width: 110%;
+}
+.info_gift input{
+    /* visibility: hidden; */
+    /* 라디오 자리가 남아있어서 디스플레이 논처리로 변경 */
+    display: none;
+}
+/* ---라디오 버튼 눌렀을때 아웃라인 생성---*/
+.info_gift input:checked +img{
+    outline: 4px solid var(--main-color);
+    /* border로 하면 이미지가 움직인다 */
+    border-radius: 10px;
+}
+.info_gift_Notice{
+    text-align: center;
+}
+.info_gift_Notice span{
+    font-weight: bolder;
+}
+/* ---약관동의----- */
+.agreement{
+    margin-top: 30px;
+}
+.agreement label{
+    margin-left: 42px;
+    display: inline-block;
+    font-size: 1em;
+}
+.agreement span{
+    font-weight: bolder;
+}
+#check_agreement1, #check_agreement2{
+    display: none;
+}
+.agreement label{
+    padding-left: 29px;
+    margin-left: 45px;
+    background-image: url("/Assets/img/check.png"); 
+    background-repeat: no-repeat;
+}
+.agreement label:first-of-type{
+    margin-bottom: 20px;
+}
+
+/* -----서브밋 버튼--------- */
+.submit input{
+    border: none;
+    background-color: var(--main-color);
+    width: 436px;
+    height: 74px;
+    border-radius: 40px;
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: white;
+    margin-left: 35px;
+    margin-top: 45px;
+    cursor: pointer;
+}
+.submit p{
+    margin-top: 15px;
+    display: inline-block;
+    margin-bottom: 70px;
+}
+.submit span{
+    font-weight: bolder;
+}
+/* =================== */
+/*     2. 공모전기간    */
+/* =================== */
+#evnet2{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    /* margin-left: -10px; */
+}
+#evnet2 img{
+    margin-top: 50px;
+    width: 96%;
+    margin-left: 2%;
+}
+/* ---해시태그복사하기 버튼--- */
+#evnet2 button{
+    width: 300px;
+    height: 81px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.3em;
+    margin: 40px 0 60px 150px;
+    place-items: right;   
+ }
+/* ======================= */
+/*    3. 공모전 당첨 경품   */
+/* ======================= */
+#evnet3{
+    margin-top: 50px;
+}
+#evnet3 img{
+    margin: 50px 0 70px 2%;
+    width: 94%;
+}
+/* ======================= */
+/*    4. 공모전 참여방법   */
+/* ======================= */
+#evnet4{
+    margin-top: 50px;
+}
+#evnet4 img{
+    margin: 50px 0px 70px 4%;
+    width: 96%;
+}
+/* ======================= */
+/*      카카오 문의하기     */
+/* ======================= */
+#evnet5{
+    margin-top: 50px;
+    background-color: #F7E600;
+}
+#evnet5 img{
+    margin: 50px 0 70px 4px;
+    width: 98%;
+}
+.banner{
+    background-color: #3c2220;
+    border-radius:50px;    
+    cursor: pointer;
+    width: 437px;
+    height: 76px;   
+    text-align: center;
+    margin: -22px 0 70px 90px ;
+}
+.banner a{
+    font-weight: bolder;
+    color: white;
+    font-size: 1.4em;
+    line-height: 73px;   
+}
+/* ========================== */
+/*     footer   유의사항      */
+/* ========================= */
+#footerNotice{
+    margin-top: 60px;
+    margin-bottom: 100px;
+    width: 100%;
+    color: white;
+    background-color:#0d6097;
+}
+.note{
+    padding-top: 6px;
+    padding-bottom: 50px;
+    width: 100%;
+    margin-left: 600px;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+}
+.note p:first-of-type{
+    margin-top: 60px;
+}
+.note p{
+    text-align: left;
+    margin-left: 250px;
+}
+#footeLogo{
+    position: fixed;
+    bottom: 0;
+    background-color: #84378a;
+    width: 100%;
+    height: 100px;
+    padding-bottom: 41px;
+    /* line-height: 100px; */
+    z-index: 3;
+}
+#footeLogo img{
+    margin-top: 40px;
+    padding-right: 20px;
+}
+#footeLogo a{
+    font-size: 2em;
+    font-weight: bolder;
+    color: white;
+    display: inline-block;
+    /* border: var(--border-set); */
+}
