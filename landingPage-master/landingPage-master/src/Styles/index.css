@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --left-size:892px;
+    --border-set:1px solid red;
+    --input-color:#F7F7F7;
+    --main-color:#239AFF;
+}
+body{
+    width: 100%;
+    background-image: url("../Assets/img/checkimg.png");
+    /* 배경이미지 다시 확인 */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    /* 커버를 꼭 적자! */
+    margin: auto;
+}
+/* ------컨테이너------- */
+#wrap{
+    margin: 0 auto;
+    width: 1300px; 
+}
+/* ------inner----- */
+.inner, footer{
+    width: 1300px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* 인풋 아웃라인 설정 */
+input:focus{
+    outline: 3px solid var(--main-color);
+}
+
+/* 플레이스홀더 업그레이드 가상클래스 사용 */
+input::placeholder{
+    padding-left: 15px;
+    font-size: 1.5em;
+}
+
+/* =================== */
+/*    유튜브, 인스타  */
+/* =================== */
+.evnet1{
+    display: flex;
+}
+.inner1{
+   width: 518px ;
+   background-color: white;
+   position: relative;
+   top: 1709px;
+   left: 594px;
+}
+.url img {
+    position: relative;
+    top: 20px;
+    left: 45px;
+}
+/* =================== */
+/*   개인정보 input  */
+/* =================== */
+.info1{
+    position: relative;
+    top: 43px;
+    left: 50px;
+}
+.instaUrl{
+    position: relative;
+    top: -51px;
+}
+.info1 input{
+    border: none;
+    background-color: #F7F7F7;
+    width: 436px;
+    height: 74px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+/* ---성별 라디오버튼 */
+.radio_info{
+    position: relative;
+    top: 55px;
+    left: 50px;
+}
+.radio_info span{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+.radio_info input{
+    width: 2em;
+    height: 2em;
+}
+.radio_info label:last-child {
+    margin-left: 137px;
+}
+/* ----나이, 핸드폰, 사진, URL--- */
+.info2{
+    position: relative;
+    top: 96px;
+    left: 50px;
+}
+/*-----인풋 전체세팅-----*/
+.info2 input{
+    border: none;
+    background-color: #F7F7F7;
+    width: 436px;
+    height: 74px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+/* -----셀렉트 세팅-------*/
+.info2 select{
+    border: none;
+    background-color: #F7F7F7;
+    width: 436px;
+    height: 74px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.23em;
+    color: #757575;
+    padding: 10px;
+    
+}
+
+/* .info2 input:first-child{
+     margin-top: 50px; 
+} */
+
+/* -----파일첨부하기 버튼변경------- */
+.info2 input:nth-child(3){
+    display: inline-block;
+    width: 418px;
+    height: 74px;
+    padding: 0 10px;
+    /* vertical-align: middle; */
+    /* width: 78%;   */
+    color: #999999;
+}
+.info2 label{
+    display: inline-block;
+    position: relative;
+    top: -85px;
+    left: 331px;
+    padding: 13px 13px 0 13px;
+    color: #fff;
+    background-color: var(--main-color);
+    cursor: pointer;
+    height: 40px;
+    border-radius: 10px;
+}
+.info2 input[type="file"]{
+    display: none;
+    position: absolute;
+    /* width: 0;
+    height: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    /* border: 0;  */
+}
+
+/* 스판 */
+.info2 span{
+    display: inline-block;
+    color: red;
+    position: relative;
+    top: -54px;
+    left: 16px;
+    font-size: 1em;
+}
+.info2 h2{
+   margin-top: -22px;
+   margin-left: 20px;
+}
+/* ---쿠션선택 라디오버튼-----*/
+.info_gift{
+    display: inline-block;
+    position: relative;
+    top: 147px;
+    /* left: px; */
+}
+.info_gift img{
+    cursor: pointer;
+}
+.info_gift input{
+    visibility: hidden;
+}
+/* 라디오 버튼 눌렀을때 아웃라인 생성 */
+.info_gift input:checked +img{
+    outline: 4px solid var(--main-color);
+    /* border로 하면 이미지가 움직인다 */
+    border-radius: 10px;
+}
+
+/* -----색상변경 불가---- */
+.info_gift_submit{
+    margin: auto;
+    /* inner의 넓이 */
+    width: 518px;
+    position: relative;
+    top: 197px;
+    text-align: center;
+    font-size: 1.2em;
+}
+/*-----참여하기 동의 체크박스-----*/
+.info_gift_submit p:first-child{
+    margin-bottom: 5px;
+}
+.info_gift_submit span{
+    font-weight: bolder;
+}
+.agreement{
+    margin: auto;
+    /* inner의 넓이 */
+    width: 518px;
+    position: relative;
+    top:227px;
+    left: 12px;
+    font-size: 1.2em;
+}
+.agreement label{
+    margin-left: 42px;
+    display: inline-block;
+    font-size: 1em;
+}
+.agreement span{
+    font-weight: bolder;
+}
+/*------체크박스 커스텀------*/
+#check_agreement1, #check_agreement2{
+    visibility: hidden
+}
+.agreement label{
+    padding-left: 29px;
+    margin-left: 45px;
+    background-image: url("/Assets/img/check.png"); 
+    background-repeat: no-repeat;
+}
+/*=========체크박스 선택 후 변경 불가======*/
+/* -----서브밋 버튼--------- */
+.submit{
+    margin: auto;
+    /* inner의 넓이 */
+    width: 518px;
+    position: relative;
+    top:233px;
+    left: 12px;
+    font-size: 1.2em;
+}
+.submit input{
+    border: none;
+    background-color: var(--main-color);
+    width: 436px;
+    height: 74px;
+    border-radius: 40px;
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: white;
+    margin-left: 35px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.submit p{
+    position: relative;
+    top:47px;
+    left: 79px;
+    margin-bottom: 60px;;
+}
+.submit span{
+    font-weight: bolder;
+}
+/* =================== */
+/*     2. 공모전기간    */
+/* =================== */
+
+.inner2 img{
+    position: relative;
+    top: 2179px;
+    left: 593px;
+}
+/* .inner2 input{
+    visibility: hidden;
+} */
+.inner2 button{
+   position: relative;
+   width: 300px;
+   top: 2127px;
+   left: 192px;
+   background-image: url(../Assets/img/hashtagBtn.png);
+   height: 81px;
+   outline: none;
+   border: none;
+   cursor: pointer;
+}
+
+/* ======================= */
+/*    3. 공모전 당첨 경품   */
+/* ======================= */
+
+.inner3 img{
+    position: relative;
+    top: 2201px;
+    left: 593px;
+}
+/* .event3 {
+    width: 518px ;
+    position: relative;
+    top: 2214px;
+    left: 593px;
+} */
+/* ======================= */
+/*    4. 공모전 참여방법   */
+/* ======================= */
+.inner4 img{
+    position: relative;
+    top: 2230px;
+    left: 593px;
+}
+
+/* .event4 {
+    width: 518px ;
+    position: relative;
+    top: 2100px;
+    left: 644px;
+} */
+
+
+/* ======================= */
+/*      카카오 문의하기     */
+/* ======================= */
+.inner5 img{
+    position: relative;
+    top: 2264px;
+    left: 593px;
+}
+
+/* .event5 .inner{
+    width: 518px ;
+    position: relative;
+    top: 2175px;
+    left: 895px;
+} */
+.inner5 a{
+    position: relative;
+    width: 227px;
+    height: 21px;
+    top: 1958px;
+    left: 220px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: bolder;
+ }
+.guide {
+    position: relative;
+    width: 437px;
+    height: 76px;
+    top: 2117px;
+    left: 637px;
+    background-color: #3c2220;
+    border-radius:50px;    
+    cursor: pointer;
+} 
+.guide a{
+    top: 23px;
+    left: 106px;
+    color: white;
+    font-size: 1.3em;
+}
+/* ======================= */
+/*        유의사항          */
+/* ======================= */
+.inner6{
+    position: relative;
+    width: 100%;
+    top: 2229px;
+    background-color: #0d6097;
+    padding: 20px;
+}
+.inner6 p{
+    color: white;
+    font-size: 0.5em;
+    position: relative;
+    left: 509px;
+}
+/* ================== */
+/*      바로가기       */
+/* ================== */
+.inner7{
+    position: relative;
+    width: 100%;
+    top: 2229px;
+    background-color: #843c92;
+    padding: 10px;
+    /* margin: auto; */
+    text-align: center;
+}
+.inner7 a, .inner7 img{
+    color: white;
+    font-weight: bolder;
+    font-size: 2em;
+    position: relative;
+    /* left: 157px; */
+}
