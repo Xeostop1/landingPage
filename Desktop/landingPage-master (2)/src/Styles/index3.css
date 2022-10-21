@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --left-size:892px;
+    --border-set:1px solid red;
+    --input-color:#F7F7F7;
+    --main-color:#239AFF;
+}
+body{
+  background-color: aquamarine;
+}
+#wrap{
+    /* margin:0 auto; */
+    /* width: 1800px; */
+    
+    /* 현재 마진 0이 없어도 flex로 가운데 정렬을 맞춰준상태 */
+  
+}
+/* 1.정렬하고 싶은 파트를 모두 선택! */
+/* display:flex 주고 콘텐츠를 가운데 정렬함 */
+#header, #footer, #main{
+    display: flex;
+    justify-content: center;
+}
+/* 세로 시작위치를 세팅해줌! */
+
+.inner{
+    width: 560px;
+    position: absolute;
+    top:50%
+}
+#event1{
+    height: 500px;
+    border: var(--border-set);
+    background-color: red;
+}
+#event2{
+    height: 800px;
+    border: var(--border-set);
+    background-color:yellow;
+}
+#event3{
+    height: 500px;
+    border: var(--border-set);
+    background-color: black;
+}
+#event4{
+    height: 500px;
+    border: var(--border-set);
+    background-color: yellowgreen;
+}
+#event5{
+    height: 500px;
+    border: var(--border-set);
+    background-color:burlywood;
+}
+/* 푸터가 잘 안되는데 확인해보자! */
+/* 이너에 넣지 말고 position fixed 가장 상위에 주어도 되고, */
+/* 직접 고정하고 싶은곳에 줘도 fixed해도 무방 */
+/* 나는 푸터 고정이라 바텀을 0에 세팅 메뉴 고정이라면 top:0; */
+
+#footer{
+ 
+}
+
+.footer_main{
+    width: 1952px; 
+    background-color: purple;
+    border: var(--border-set); 
+    height: 100px;
+    color: white;
+    /* text-align: center;
+    line-height: 100px; */
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+
